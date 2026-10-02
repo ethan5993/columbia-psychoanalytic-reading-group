@@ -32,6 +32,26 @@
       padding-bottom: 22px;
       margin-bottom: 56px;
     }
+    .site-nav {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.site-nav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.site-nav a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
 
     .eyebrow {
       font-size: 0.78rem;
@@ -127,8 +147,15 @@
 
 <body>
   <div class="page">
-    <header>
-      <div class="eyebrow">Columbia, South Carolina</div>
+<header>
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="calendar.html">Calendar</a>
+    <a href="papers.html">Papers</a>
+    <a href="community.html">Community</a>
+  </nav>
+
+  <div class="eyebrow">Columbia, South Carolina</div>
       <h1>The <span class="smallcaps">name</span> of the Group</h1>
 
       <p class="subtitle">
