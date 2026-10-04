@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Members | The Name of the Group</title>
+
   <style>
     :root {
       --paper: #f7f3eb;
@@ -28,9 +29,7 @@
     }
 
     header {
-      border-bottom: 1px solid var(--rule);
-      padding-bottom: 22px;
-      margin-bottom: 56px;
+      margin-bottom: 48px;
     }
 
     .site-nav {
@@ -55,14 +54,6 @@
       text-underline-offset: 4px;
     }
 
-    .eyebrow {
-      font-size: 0.78rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 18px;
-    }
-
     h1 {
       font-size: clamp(2.4rem, 6vw, 5rem);
       line-height: 0.95;
@@ -71,23 +62,20 @@
       margin: 0;
     }
 
-    .subtitle {
-      max-width: 680px;
-      margin-top: 24px;
-      font-size: 1.18rem;
-      color: var(--muted);
-    }
-
     .members {
       max-width: 820px;
     }
 
     .member {
-      border-top: 1px solid var(--rule);
-      padding: 28px 0;
       display: grid;
-      grid-template-columns: 220px minmax(0, 1fr);
-      gap: 32px;
+      grid-template-columns: 240px minmax(0, 1fr);
+      gap: 72px;
+      padding: 32px 0;
+      border-top: 1px solid var(--rule);
+    }
+
+    .member:last-child {
+      border-bottom: 1px solid var(--rule);
     }
 
     .member h2 {
@@ -97,20 +85,15 @@
       margin: 0;
     }
 
-    .role {
-      color: var(--muted);
-      font-size: 0.96rem;
-      margin-top: 8px;
-    }
-
-    .member p {
-      margin: 0 0 0.9rem;
+    .member-info p {
+      margin: 0;
+      max-width: 460px;
       font-size: 1.02rem;
+      color: var(--muted);
     }
 
-    .label {
-      color: var(--muted);
-      font-style: italic;
+    .member-link {
+      margin-top: 12px !important;
     }
 
     a {
@@ -134,7 +117,7 @@
 
       .member {
         grid-template-columns: 1fr;
-        gap: 10px;
+        gap: 8px;
       }
     }
   </style>
@@ -149,55 +132,64 @@
         <a href="members.html">Members</a>
         <a href="community.html">Community</a>
       </nav>
+
       <h1>Members</h1>
     </header>
 
     <main class="members">
       <article class="member">
-        <div>
-          <h2>Ethan Taylor</h2>
-          <div class="role">Licensed Professional Counselor in private practice; Columbia, South Carolina</div>
-        </div>
-        <div>
+        <h2>Ethan Taylor</h2>
+
+        <div class="member-info">
           <p>
+            Licensed Professional Counselor in private practice; Columbia, South Carolina
+          </p>
+
+          <p class="member-link">
             <a href="https://venueclinic.com">Venue Clinic</a>
           </p>
         </div>
       </article>
 
       <article class="member">
-        <div>
-          <h2>Colton Greganti</h2>
-          <div class="role">Doctoral Student in English Literature at The University of South Carolina; Columbia, South Carolina</div>
-        </div>
+        <h2>Colton Greganti</h2>
 
-        <div>
+        <div class="member-info">
           <p>
-           <a href="https://sc.edu/study/colleges_schools/artsandsciences/english_language_and_literature/our_people/directory/gs_greganti_colton.php">Colton Greganti</a>
+            Doctoral Student in English Literature at the University of South Carolina;
+            Columbia, South Carolina
           </p>
-        </div>
-      </article>
-      
-         <article class="member">
-        <div>
-          <h2>Jonathan Pritchard</h2>
-          <div class="role">Licensed Independent Social Worker in private practice; Columbia, South Carolina</div>
-        </div>
 
-        <div>
-          <p>
-           <a href="https://www.jonathanpritchardcounseling.com">Jonathan Pritchard Counseling</a>
+          <p class="member-link">
+            <a href="https://sc.edu/study/colleges_schools/artsandsciences/english_language_and_literature/our_people/directory/gs_greganti_colton.php">Colton Greganti</a>
           </p>
         </div>
       </article>
 
-       <article class="member">
-        <div>
-          <h2>Mike Thompson</h2>
-          <div class="role">Doctoral Student in English Literature at The University of South Carolina; Columbia, South Carolina</div>
+      <article class="member">
+        <h2>Jonathan Pritchard</h2>
+
+        <div class="member-info">
+          <p>
+            Licensed Independent Social Worker in private practice; Columbia, South Carolina
+          </p>
+
+          <p class="member-link">
+            <a href="https://www.jonathanpritchardcounseling.com">Jonathan Pritchard Counseling</a>
+          </p>
         </div>
       </article>
-      
+
+      <article class="member">
+        <h2>Mike Thompson</h2>
+
+        <div class="member-info">
+          <p>
+            Doctoral Student in English Literature at the University of South Carolina;
+            Columbia, South Carolina
+          </p>
+        </div>
+      </article>
     </main>
 
     <footer>
