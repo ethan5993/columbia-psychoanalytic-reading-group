@@ -1,1 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reading Schedule | The Name of the Group</title>
+  <style>
+    :root {
+      --paper: #f7f3eb;
+      --ink: #171411;
+      --muted: #6f675f;
+      --rule: #cfc5b8;
+      --accent: #6f1d1b;
+    }
 
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.6;
+      color: var(--ink);
+      background: var(--paper);
+    }
+
+    .page {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 48px 24px 64px;
+    }
+
+    header {
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 22px;
+      margin-bottom: 56px;
+    }
+
+    .site-nav {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .site-nav a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .site-nav a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .eyebrow {
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 6vw, 5rem);
+      line-height: 0.95;
+      font-weight: normal;
+      max-width: 820px;
+      margin: 0;
+    }
+
+    .subtitle {
+      max-width: 640px;
+      margin-top: 24px;
+      font-size: 1.18rem;
+      color: var(--muted);
+    }
+
+    .schedule {
+      max-width: 820px;
+    }
+
+    .schedule-intro {
+      font-size: 1.08rem;
+      color: var(--muted);
+      margin-bottom: 36px;
+    }
+
+    .meeting {
+      border-top: 1px solid var(--rule);
+      padding: 26px 0;
+      display: grid;
+      grid-template-columns: 180px minmax(0, 1fr);
+      gap: 32px;
+    }
+
+    .date {
+      color: var(--accent);
+      font-size: 0.86rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .meeting h2 {
+      font-size: 1.35rem;
+      font-weight: normal;
+      line-height: 1.25;
+      margin: 0 0 10px;
+    }
+
+    .meeting p {
+      margin: 0 0 0.8rem;
+      font-size: 1.02rem;
+    }
+
+    .label {
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    footer {
+      border-top: 1px solid var(--rule);
+      margin-top: 56px;
+      padding-top: 18px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 720px) {
+      .page {
+        padding-top: 32px;
+      }
+
+      .meeting {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <header>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="calendar.html">Calendar</a>
+        <a href="papers.html">Papers</a>
+        <a href="community.html">Community</a>
+      </nav>
+
+      <div class="eyebrow">Reading Schedule</div>
+      <h1>Calendar</h1>
+      <p class="subtitle">
+        A working schedule of upcoming meetings, primary readings, and suggested
+        supplemental texts.
+      </p>
+    </header>
+
+    <main class="schedule">
+      <p class="schedule-intro">
+        Current arc: Jacques Lacan, <em>Seminar I: Freud’s Papers on Technique</em>.
+      </p>
+
+      <article class="meeting">
+        <div class="date">Next Meeting</div>
+        <div>
+          <h2>Seminar I, assigned chapters</h2>
+          <p><span class="label">Primary reading:</span> Lacan, <em>Seminar I</em>, chapters TBD.</p>
+          <p><span class="label">Supplemental reading:</span> Freud, text TBD.</p>
+        </div>
+      </article>
+
+      <article class="meeting">
+        <div class="date">Meeting Date TBD</div>
+        <div>
+          <h2>Technique, speech, and the analytic relation</h2>
+          <p><span class="label">Primary reading:</span> Lacan, <em>Seminar I</em>, chapters TBD.</p>
+          <p><span class="label">Supplemental reading:</span> Suggested text TBD.</p>
+        </div>
+      </article>
+
+      <article class="meeting">
+        <div class="date">Meeting Date TBD</div>
+        <div>
+          <h2>Language, symbolization, and the clinic</h2>
+          <p><span class="label">Primary reading:</span> Lacan, <em>Seminar I</em>, chapters TBD.</p>
+          <p><span class="label">Supplemental reading:</span> Suggested text TBD.</p>
+        </div>
+      </article>
+    </main>
+
+    <footer>
+      The Name of the Group / Columbia, South Carolina
+    </footer>
+  </div>
+</body>
+</html>
