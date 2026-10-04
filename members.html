@@ -1,1 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Members | The Name of the Group</title>
+  <style>
+    :root {
+      --paper: #f7f3eb;
+      --ink: #171411;
+      --muted: #6f675f;
+      --rule: #cfc5b8;
+      --accent: #6f1d1b;
+    }
 
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.6;
+      color: var(--ink);
+      background: var(--paper);
+    }
+
+    .page {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 48px 24px 64px;
+    }
+
+    header {
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 22px;
+      margin-bottom: 56px;
+    }
+
+    .site-nav {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .site-nav a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .site-nav a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .eyebrow {
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 6vw, 5rem);
+      line-height: 0.95;
+      font-weight: normal;
+      max-width: 820px;
+      margin: 0;
+    }
+
+    .subtitle {
+      max-width: 680px;
+      margin-top: 24px;
+      font-size: 1.18rem;
+      color: var(--muted);
+    }
+
+    .members {
+      max-width: 820px;
+    }
+
+    .member {
+      border-top: 1px solid var(--rule);
+      padding: 28px 0;
+      display: grid;
+      grid-template-columns: 220px minmax(0, 1fr);
+      gap: 32px;
+    }
+
+    .member h2 {
+      font-size: 1.35rem;
+      font-weight: normal;
+      line-height: 1.25;
+      margin: 0;
+    }
+
+    .role {
+      color: var(--muted);
+      font-size: 0.96rem;
+      margin-top: 8px;
+    }
+
+    .member p {
+      margin: 0 0 0.9rem;
+      font-size: 1.02rem;
+    }
+
+    .label {
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    footer {
+      border-top: 1px solid var(--rule);
+      margin-top: 56px;
+      padding-top: 18px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 720px) {
+      .page {
+        padding-top: 32px;
+      }
+
+      .member {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <header>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="calendar.html">Calendar</a>
+        <a href="members.html">Members</a>
+        <a href="community.html">Community</a>
+      </nav>
+
+      <div class="eyebrow">Members</div>
+      <h1>Members</h1>
+    </header>
+
+    <main class="members">
+      <article class="member">
+        <div>
+          <h2>Ethan Taylor</h2>
+          <div class="role">Licensed Professional Counselor, Venue Clinic; Columbia, South Carolina</div>
+        </div>
+
+        <div>
+          <p>
+            Ethan is a clinician in private practice and the founder of Venue
+            Clinic. His interests include Freudian and Lacanian psychoanalysis, clinical
+            technique, and the critique of adaptive
+            psychotherapies.
+          </p>
+          <p>
+            <a href="https://venueclinic.com">Venue Clinic</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="member">
+        <div>
+          <h2>Colton Greganti</h2>
+          <div class="role">Doctoral Student in English Literature, University of South Carolina; Columbia, South Carolina</div>
+        </div>
+
+        <div>
+          <p>
+            Colton is a doctoral student studying English literature at the University of South Carolina. His interest include 20th century American literature, 
+            literature of the American South, critical theory, psychoanalytic theory,  and American realism and modernism.
+          </p>
+          <p>
+           <a href="https://sc.edu/study/colleges_schools/artsandsciences/english_language_and_literature/our_people/directory/gs_greganti_colton.php">Colton Greganti</a>
+          </p>
+        </div>
+      </article>
+    </main>
+
+    <footer>
+      The Name of the Group / Columbia, South Carolina
+    </footer>
+  </div>
+</body>
+</html>
