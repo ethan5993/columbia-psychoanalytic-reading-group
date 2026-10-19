@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Meeting Schedule | The Name of the Group</title>
   <style>
+    /* Upcoming meeting designation */
+.next-meeting .date::before {
+  content: "UPCOMING MEETING";
+  display: block;
+  font-size: 0.65rem;
+  font-weight: bold;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
     /* Muted appearance for past meetings */
     .meeting.past-event,
     .meeting.past-event .date,
@@ -235,20 +245,30 @@
     </footer>
   </div>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const today = new Date();
-      today.setHours(0, 0, 0, 0);
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
 
-      document.querySelectorAll("[data-date]").forEach(function (event) {
-        const [year, month, day] = event.dataset.date.split("-").map(Number);
-        const eventDate = new Date(year, month - 1, day);
+    let nextMeeting = null;
+    let nextMeetingDate = null;
 
-        if (eventDate < today) {
-          event.classList.add("past-event");
-        }
-      });
+    document.querySelectorAll(".meeting[data-date]").forEach(function (event) {
+      const [year, month, day] = event.dataset.date.split("-").map(Number);
+      const eventDate = new Date(year, month - 1, day);
+
+      if (eventDate < today) {
+        event.classList.add("past-event");
+      } else if (nextMeetingDate === null || eventDate < nextMeetingDate) {
+        nextMeeting = event;
+        nextMeetingDate = eventDate;
+      }
     });
-  </script>
+
+    if (nextMeeting) {
+      nextMeeting.classList.add("next-meeting");
+    }
+  });
+</script>
 </body>
 </html>
