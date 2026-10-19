@@ -5,6 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Meeting Schedule | The Name of the Group</title>
   <style>
+    /* Muted appearance for past meetings */
+    .meeting.past-event,
+    .meeting.past-event .date,
+    .meeting.past-event h2,
+    .meeting.past-event h3,
+    .meeting.past-event p,
+    .meeting.past-event .label,
+    .meeting.past-event li {
+      color: #938c83;
+    }
+
+    .meeting.past-event a {
+      color: #817b87;
+    }
+
     :root {
       --paper: #f7f3eb;
       --ink: #171411;
@@ -157,60 +172,60 @@
       </p>
     </header>
 
-   <main class="schedule">
+    <main class="schedule">
       <p class="schedule-intro">
         <strong>Current Study:</strong> Jacques Lacan, <em>Seminar I: Freud’s Papers on Technique</em>.
       </p>
 
-      <article class="meeting">
+      <article class="meeting" data-date="2026-12-09">
         <div class="date">December 9, 2026</div>
         <div>
           <h2>Lacan, <em>Seminar I</em>, "The See-Saw of Desire"</h2>
           <p><span class="label">Supplemental material:</span></p>
-<ul>
-  <li>
-    <a href="https://web.english.upenn.edu/~cavitch/pdf-library/Freud_Instincts.pdf">Freud, “Instincts and Their Vicissitudes” (1915)</a>
-  </li>
-  <li>
-    <a href="https://www.wpacommunity.org/s/Confusion-of-Tongues-Ferenczi-1932.pdf">Ferenczi, “Confusion of Tongues Between Adults and the Child” (1933)</a>
-  </li>
-</ul>
+          <ul>
+            <li>
+              <a href="https://web.english.upenn.edu/~cavitch/pdf-library/Freud_Instincts.pdf">Freud, “Instincts and Their Vicissitudes” (1915)</a>
+            </li>
+            <li>
+              <a href="https://www.wpacommunity.org/s/Confusion-of-Tongues-Ferenczi-1932.pdf">Ferenczi, “Confusion of Tongues Between Adults and the Child” (1933)</a>
+            </li>
+          </ul>
         </div>
       </article>
 
-      <article class="meeting">
+      <article class="meeting" data-date="2026-11-11">
         <div class="date">November 11, 2026</div>
         <div>
-           <h2>Lacan, <em>Écrits</em>, "The Mirror Stage as Formative of the <em>I</em> Function as Revealed in Psychoanalytic Experience"</h2>
-            <p><span class="label">Supplemental material:</span></p>
-<ul>
-  <li>
-    Neill, Reading Lacan’s Écrits: From ‘Overture to This Collection’ to ‘Presentation on Psychical Causality,’ “The Mirror Stage as Formative of the <em>I</em> Function as Revealed in Psychoanalytic Experience” (2024)
-  </li>
-</ul>
+          <h2>Lacan, <em>Écrits</em>, "The Mirror Stage as Formative of the <em>I</em> Function as Revealed in Psychoanalytic Experience"</h2>
+          <p><span class="label">Supplemental material:</span></p>
+          <ul>
+            <li>
+              Neill, Reading Lacan’s Écrits: From ‘Overture to This Collection’ to ‘Presentation on Psychical Causality,’ “The Mirror Stage as Formative of the <em>I</em> Function as Revealed in Psychoanalytic Experience” (2024)
+            </li>
+          </ul>
         </div>
       </article>
 
-      <article class="meeting">
+      <article class="meeting" data-date="2026-10-28">
         <div class="date">October 28, 2026</div>
         <div>
           <h2>Film: <em>The Master</em> (Paul Thomas Anderson, 2012)</h2>
         </div>
       </article>
 
-      <article class="meeting">
+      <article class="meeting" data-date="2026-10-14">
         <div class="date">October 14, 2026</div>
         <div>
           <h2>Lacan, <em>Seminar I</em>, "Zeitlich-Entwicklungsgeschichte"</h2>
           <p><span class="label">Supplemental material:</span></p>
-<ul>
-  <li>
-    <a href="https://marcuse.faculty.history.ucsb.edu/classes/201/articles/1914FreudRemembering.pdf">Freud, “Remembering, Repeating and Working-Through” (1914)</a>
-  </li>
-  <li>
-    <a href="https://web.english.upenn.edu/~cavitch/pdf-library/Freud_WritingPad.pdf">Freud, “A Note Upon the Mystic Writing-Pad” (1925)</a>
-  </li>
-</ul>
+          <ul>
+            <li>
+              <a href="https://marcuse.faculty.history.ucsb.edu/classes/201/articles/1914FreudRemembering.pdf">Freud, “Remembering, Repeating and Working-Through” (1914)</a>
+            </li>
+            <li>
+              <a href="https://web.english.upenn.edu/~cavitch/pdf-library/Freud_WritingPad.pdf">Freud, “A Note Upon the Mystic Writing-Pad” (1925)</a>
+            </li>
+          </ul>
         </div>
       </article>
     </main>
@@ -219,5 +234,21 @@
       The Name of the Group / Columbia, South Carolina
     </footer>
   </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+
+      document.querySelectorAll("[data-date]").forEach(function (event) {
+        const [year, month, day] = event.dataset.date.split("-").map(Number);
+        const eventDate = new Date(year, month - 1, day);
+
+        if (eventDate < today) {
+          event.classList.add("past-event");
+        }
+      });
+    });
+  </script>
 </body>
 </html>
