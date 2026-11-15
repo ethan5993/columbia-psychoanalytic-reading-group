@@ -81,12 +81,42 @@
       margin: 0 0 24px;
     }
 
-    .empty-state {
+    .study {
       border-top: 1px solid var(--rule);
-      padding: 26px 0;
-      color: var(--muted);
+      padding: 26px 0 32px;
+      max-width: 760px;
+    }
+
+    .study h3 {
+      font-size: 1.65rem;
+      font-weight: normal;
+      line-height: 1.25;
+      margin: 0 0 8px;
+    }
+
+    .study-subtitle {
       font-style: italic;
-      font-size: 1.02rem;
+      color: var(--muted);
+      font-size: 1.08rem;
+      margin: 0 0 20px;
+    }
+
+    .study-meta {
+      color: var(--accent);
+      font-size: 0.9rem;
+      letter-spacing: 0.04em;
+      margin: 0 0 16px;
+    }
+
+    .study-description {
+      max-width: 700px;
+      margin: 0 0 16px;
+    }
+
+    .study-note {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-top: 24px;
     }
 
     footer {
@@ -119,21 +149,60 @@
       <h1>Special Studies</h1>
 
       <p class="subtitle">
-        Special Studies are time-limited reading and discussion
-        groups devoted to particular questions, texts, and thinkers
-        in psychoanalysis and related disciplines. Each study
-        follows a defined schedule and concludes upon completion
-        of its program.
+        Special Studies are occasional, intensive gatherings
+        devoted to particular questions, texts, and thinkers
+        in psychoanalysis and related disciplines. Open to
+        the public, each study offers an opportunity for
+        collective reading and discussion without an ongoing
+        commitment. Studies are proposed and organized by
+        members of The Name of the Group.
       </p>
     </header>
 
     <main class="studies">
-      <h2 class="section-heading">Current Studies</h2>
+      <h2 class="section-heading">Upcoming Studies</h2>
 
-      <section aria-label="Current studies">
-        <p class="empty-state">
-          No special studies are currently scheduled.
+      <section class="study" aria-labelledby="dream-study-title">
+
+        <p class="study-meta">
+          Saturday, January 16, 2027 · Date Tentative
         </p>
+
+        <h3 id="dream-study-title">
+          The Dream Is Not a Story
+        </h3>
+
+        <p class="study-subtitle">
+          Freud, Lacan, and Surrealism
+        </p>
+
+        <p class="study-description">
+          What does it mean to interpret a dream? Is a dream
+          a story concealing another story, or does its
+          formation obey a different logic altogether?
+        </p>
+
+        <p class="study-description">
+          This day-long study will explore Freud's theory
+          of dream-work, Lacan's account of the unconscious
+          and language, and the surrealist engagement with
+          dreams and the irrational. Through collective
+          reading, discussion, and selected films, we will
+          consider the relationship between dreams,
+          representation, desire, and interpretation.
+        </p>
+
+       <p class="study-note">
+  <strong>Attendance:</strong> Open to the public.
+  No prior familiarity with psychoanalysis is required.
+  Those interested in participating may contact
+  <a href="mailto:ethan.taylor@venueclinic.com">
+    ethan.taylor@venueclinic.com
+  </a>.
+  Readings, location, and further details will be
+  provided in advance.
+</p>
+
       </section>
     </main>
 
